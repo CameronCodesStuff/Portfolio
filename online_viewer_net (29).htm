@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px #ff0000, -2px -2px #00ff00; }
+            25% { text-shadow: -2px 2px #0000ff, 2px -2px #ff00ff; }
+            50% { text-shadow: 2px -2px #ffff00, -2px 2px #00ffff; }
+            75% { text-shadow: -2px -2px #ff0000, 2px 2px #00ff00; }
+            100% { text-shadow: 2px 2px #ff0000, -2px -2px #00ff00; }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+        header {
+            background: #000;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 4rem;
+            animation: glitch 1.5s infinite alternate;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2rem 0;
+            background: #000;
+            border-radius: 8px;
+        }
+        .section {
+            background: #111;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        h2 {
+            color: #ddd;
+            font-size: 2rem;
+            animation: glitch 1.5s infinite alternate;
+        }
+        .glitch-text {
+            animation: glitch 1.5s infinite alternate;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .project {
+            flex: 1 1 calc(33.333% - 1rem);
+            background: #222;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .skills span {
+            position: relative;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+        }
+        .skills span:hover::after {
+            content: attr(data-description);
+            position: absolute;
+            background: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            top: 20px;
+            left: 0;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    <div class="container">
+        <section class="section about">
+            <h2 class="glitch-text">About Me</h2>
+            <p>Welcome, I'm a passionate developer who enjoys writing and using code!</p>
+            <p>I go by the GitHub username <span class="glitch-text">CameronCodesStuff</span></p>
+        </section>
+        <section class="section projects">
+            <h2 class="glitch-text">Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <a href="https://cameroncodesstuff.github.io/EncryptoV2/" target="_blank" style="color: #00bfff;">EncryptoV2</a>
+                    <p>A text encryptor/decryptor that uses a password for secure encryption.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section skills">
+            <h2 class="glitch-text">Skills</h2>
+            <p>
+                <span data-description="Used to structure web pages.">HTML</span>, 
+                <span data-description="Styles web pages and layouts.">CSS</span>, 
+                <span data-description="Adds interactivity and dynamic behavior to websites.">JavaScript</span>, 
+                <span data-description="A versatile programming language for web and software development.">Python</span>, 
+                <span data-description="Automates tasks and commands in Windows.">Batch</span>, 
+                <span data-description="Executable files used to run programs on Windows.">EXE</span>
+            </p>
+        </section>
+    </div>
+</body>
+</html>
