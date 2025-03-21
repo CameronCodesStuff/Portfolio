@@ -67,6 +67,9 @@
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+        .project a {
+            text-decoration: none;
+        }
         .skills span {
             position: relative;
             cursor: pointer;
@@ -85,6 +88,15 @@
             white-space: nowrap;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll(".project a");
+            const colors = ["#ff0000", "#ff6600", "#ffcc00", "#33cc33", "#0099ff", "#9900cc", "#ff1493"];
+            links.forEach(link => {
+                link.style.color = colors[Math.floor(Math.random() * colors.length)];
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -100,24 +112,32 @@
             <h2 class="glitch-text">Projects</h2>
             <div class="projects">
                 <div class="project">
-                    <a href="https://cameroncodesstuff.github.io/EncryptoV2/" target="_blank" style="color: #00bfff;">EncryptoV2</a>
+                    <a href="https://cameroncodesstuff.github.io/EncryptoV2/" target="_blank">EncryptoV2</a>
                     <p>A text encryptor/decryptor that uses a password for secure encryption.</p>
                 </div>
                 <div class="project">
-                    <a href="https://cameroncodesstuff.github.io/DeviceInfo/" target="_blank" style="color: #00bfff;">Device Info</a>
+                    <a href="https://cameroncodesstuff.github.io/DeviceInfo/" target="_blank">Device Info</a>
                     <p>Displays information about your device and browser.</p>
                 </div>
                 <div class="project">
-                    <a href="https://cameroncodesstuff.github.io/Dice/" target="_blank" style="color: #00bfff;">Dice</a>
+                    <a href="https://cameroncodesstuff.github.io/Dice/" target="_blank">Dice</a>
                     <p>A gambling game that has a small chance of freezing your computer for a random amount of time.</p>
                 </div>
                 <div class="project">
-                    <a href="https://cameroncodesstuff.github.io/CodeEditor/" target="_blank" style="color: #00bfff;">Code Editor</a>
+                    <a href="https://cameroncodesstuff.github.io/CodeEditor/" target="_blank">Code Editor</a>
                     <p>A simple and functional online code editor.</p>
                 </div>
                 <div class="project">
-                    <a href="https://cameroncodesstuff.github.io/HTMLTutorial/" target="_blank" style="color: #00bfff;">HTML Tutorial</a>
+                    <a href="https://cameroncodesstuff.github.io/HTMLTutorial/" target="_blank">HTML Tutorial</a>
                     <p>Learn HTML with this interactive tutorial.</p>
+                </div>
+                <div class="project">
+                    <a href="https://cameroncodesstuff.github.io/BadFortuneGen/" target="_blank">Bad Fortune Generator</a>
+                    <p>Generates hilariously bad fortunes for you.</p>
+                </div>
+                <div class="project">
+                    <a href="https://cameroncodesstuff.github.io/passwordstrength/" target="_blank">Password Strength Tester</a>
+                    <p>Checks the strength of your password.</p>
                 </div>
             </div>
         </section>
